@@ -1,5 +1,5 @@
 context:
-  version: 0.2.0
+  version: "0.3.0"
 
 package:
   name: kedro-skills
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/k/kedro-skills/kedro_skills-${{ version }}.tar.gz
-  sha256: 01f006d8462bf621c714b978dae2d21fd7bd7d43ef78decec0764345e088253e
+  sha256: e87f9bbaf8fb6cbdccbc57fa183a639b30c597a5b698cc82ee81557d7d1dc472
 
 build:
   number: 0
@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-  - python ${{ python_min }}.*
-  - hatchling
-  - pip
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
   run:
-  - python >=${{ python_min }},<3.15
-  - click >=8.0
-  - kedro >=1.0
-  - pyyaml >=6.0
+    - python >=${{ python_min }},<3.15
+    - click >=8.0
+    - kedro >=1.0
+    - pyyaml >=6.0
 
 tests:
   - python:
@@ -31,15 +31,15 @@ tests:
         - kedro_skills
       pip_check: true
       python_version:
-      - ${{ python_min }}.*
-      - '*'
+        - ${{ python_min }}.*
+        - '*'
 
 about:
   summary: Distribute AI coding skills to Kedro projects.
   homepage: https://github.com/kedro-org/kedro-skills
   license: Apache-2.0
   license_file:
-  - LICENSE
+    - LICENSE
 
 extra:
   recipe-maintainers:
